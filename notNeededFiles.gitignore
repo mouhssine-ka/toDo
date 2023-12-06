@@ -1,0 +1,12 @@
+# Node Modules
+node_modules/
+
+# Build artifacts
+dist/
+
+# Editor and IDE files
+.vscode/
+.idea/
+
+# Environment-specific files
+src/environments/*.ts

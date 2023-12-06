@@ -1,0 +1,54 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "Design the User Interface",
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "taskName": "Implement Task Component",
+      "isCompleted": false
+    },
+    {
+      "id": 3,
+      "taskName": "Set Up Data Model",
+      "isCompleted": false
+    },
+    {
+      "id": 4,
+      "taskName": "Create Task Service",
+      "isCompleted": false
+    },
+    {
+      "id": 5,
+      "taskName": "Add Edit Task Functionality",
+      "isCompleted": false
+    },
+    {
+      "id": 6,
+      "taskName": "Implement Task Filtering",
+      "isCompleted": false
+    },
+    {
+      "id": 7,
+      "taskName": "Enable Task Sorting",
+      "isCompleted": false
+    },
+    {
+      "id": 8,
+      "taskName": "Implement Task Deletion",
+      "isCompleted": false
+    },
+    {
+      "id": 9,
+      "taskName": "Add Data Persistence (LocalStorage)",
+      "isCompleted": false
+    },
+    {
+      "id": 10,
+      "taskName": "Implement Responsive Design",
+      "isCompleted": false
+    }
+  ]
+}

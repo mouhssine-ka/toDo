@@ -1,0 +1,41 @@
+<h1>To-Do App</h1>
+<hr>
+<div class="container">
+    <form (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Task</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter task" ngModel name="task" required>
+          <small id="errorMessage" class="form-text text-danger" *ngIf="taskForm.invalid && taskForm.dirty">Required field</small>
+        </div>
+        <button [disabled]="taskForm.invalid" type="submit" class="btn btn-primary mt-3" >Submit</button>
+      </form>
+      <div class="filter-options mt-4 d-flex flex-wrap justify-content-between" style="max-width: 400px;">
+        <button (click)="getCompletedTasks()" class="btn border-0 p-2 bg-success text-white my-2">Completed tasks</button>
+        <button (click)="getNonCompletedTasks()" class="btn border-0 p-2 bg-warning text-white my-2">Non completed tasks</button>
+        <button (click)="loadTasks()" class="btn border-0 p-2 bg-black text-white my-2">Reset filter</button>
+      </div>
+
+      <table class="table mt-5 table-striped align-middle table-responsive">
+        <thead>
+            <th class="text-left">Task       
+                <select class="p-1" [(ngModel)]="sortOrder" (change)="changeSortOrder()">
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+            </th>
+            <th class="text-center">Completed</th>
+            <th class="text-center">Delete</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of taskArray">
+                <td class="text-left text-break" id="left-td">{{t.taskName}}</td>
+                <td class="text-center">
+                    <input type="checkbox" class="checkBox" (click)="onCheck(t.id)" [(ngModel)]="t.isCompleted"/>
+                </td>
+                <td  class="text-center">
+                    <button class="btn bg-danger text-white" (click)="onDelete(t.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+</div>

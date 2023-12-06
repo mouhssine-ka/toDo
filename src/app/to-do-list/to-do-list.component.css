@@ -1,0 +1,10 @@
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.checkBox{
+    margin-left: 10px;
+}
+#left-td{
+    max-width: 200px;
+}
